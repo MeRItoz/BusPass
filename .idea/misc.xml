@@ -5,13 +5,15 @@
       <map>
         <entry key="..\:/Users/Administrator/StudioProjects/BusPass2/app/src/main/res/drawable/btn_bg.xml" value="0.125" />
         <entry key="..\:/Users/Administrator/StudioProjects/BusPass2/app/src/main/res/drawable/input_bg.xml" value="0.125" />
+        <entry key="..\:/Users/Administrator/StudioProjects/BusPass2/app/src/main/res/font/bangers.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/Administrator/StudioProjects/BusPass2/app/src/main/res/layout/activity_adminlogin.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/Administrator/StudioProjects/BusPass2/app/src/main/res/layout/activity_home.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/Administrator/StudioProjects/BusPass2/app/src/main/res/layout/activity_login.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/Administrator/StudioProjects/BusPass2/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Administrator/StudioProjects/BusPass2/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/Users/Administrator/StudioProjects/BusPass2/app/src/main/res/layout/activity_login.xml" value="0.12295081967213115" />
+        <entry key="..\:/Users/Administrator/StudioProjects/BusPass2/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Administrator/StudioProjects/BusPass2/app/src/main/res/layout/activity_payment.xml" value="0.25" />
-        <entry key="..\:/Users/Administrator/StudioProjects/BusPass2/app/src/main/res/layout/activity_register.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/Administrator/StudioProjects/BusPass2/app/src/main/res/layout/activity_userselect.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Administrator/StudioProjects/BusPass2/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/Users/Administrator/StudioProjects/BusPass2/app/src/main/res/layout/activity_userselect.xml" value="0.25" />
+        <entry key="..\:/Users/Administrator/StudioProjects/BusPass2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.125" />
       </map>
     </option>
   </component>
