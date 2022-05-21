@@ -17,6 +17,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -52,6 +58,15 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
+        TextView btn2 = findViewById(R.id.forgotPassword);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, ForgotpasswordActivity.class));
+            }
+        });
+
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,18 +86,18 @@ public class LoginActivity extends AppCompatActivity {
             inputPasswordstd.setError("Enter correct password over length 6");
         } else
         {
+
             progressDialog.setMessage("Please wait While Login....");
             progressDialog.setTitle("Login");
             progressDialog.setCanceledOnTouchOutside(false);
             progressDialog.show();
-
             mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful())
                     {
                         progressDialog.dismiss();
-                        sendUserToNextActivity();
+                        isUser();
                         Toast.makeText(LoginActivity.this,"Login Successful",Toast.LENGTH_SHORT).show();
                     }else
                     {
@@ -93,17 +108,43 @@ public class LoginActivity extends AppCompatActivity {
             });
         }
     }
-    private void sendUserToNextActivity() {
-        Intent intent=new Intent(LoginActivity.this,HomeActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
 
+    private void isUser() {
+        String userEnteredUsername= inputRegisterno.getText().toString().trim();
+        String userEnteredPassword= inputPasswordstd.getText().toString().trim();
+        String user_id = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
+        DatabaseReference reference= FirebaseDatabase.getInstance().getReference("users");
+        Query checkUser=reference.orderByChild("email").equalTo(userEnteredUsername);
+        checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
 
+                    String passwordFromDB=snapshot.child(user_id).child("password").getValue(String.class);
+                    if(passwordFromDB.equals(userEnteredPassword)){
+                        String departmentFromDB=snapshot.child(user_id).child("department").getValue(String.class);
+                        String emailFromDB=snapshot.child(user_id).child("email").getValue(String.class);
+                        String nameFromDB=snapshot.child(user_id).child("name").getValue(String.class);
+                        String phoneFromDB=snapshot.child(user_id).child("phone").getValue(String.class);
 
+                        Intent intent=new Intent(getApplicationContext(),HomeActivity.class);
+                        intent.putExtra("department",departmentFromDB);
+                        intent.putExtra("email",emailFromDB);
+                        intent.putExtra("name",nameFromDB);
+                        intent.putExtra("phone",phoneFromDB);
 
+                        startActivity(intent);
+                    }
+                }
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
-
+            }
+        });
     }
+
+
 }

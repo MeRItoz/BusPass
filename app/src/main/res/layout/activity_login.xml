@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/black"
+    android:background="#D6C634"
     tools:context=".LoginActivity">
 
 
@@ -16,7 +16,7 @@
         android:layout_marginEnd="179dp"
         android:layout_marginBottom="251dp"
         android:text="Login"
-        android:textColor="#F3EEEE"
+        android:textColor="@color/black"
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,8 +34,8 @@
         android:layout_marginTop="70dp"
         android:layout_marginEnd="32dp"
         android:autofillHints=""
-        android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/ic_baseline_email"
+        android:background="@drawable/input_bg2"
+        android:drawableLeft="@drawable/ic_baseline_emaildark"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Email Id"
@@ -45,8 +45,8 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,9 +57,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:background="@drawable/btn_bg"
+        android:background="@drawable/btn_bg2"
         android:text="Login"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/inputPasswordstd"
         app:layout_constraintStart_toStartOf="@+id/inputPasswordstd"
         app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
@@ -70,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Forgot password?"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/inputPasswordstd"
@@ -100,7 +100,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SignUp Here"
-            android:textColor="@android:color/holo_red_dark" />
+            android:textColor="@android:color/black" />
 
     </LinearLayout>
 
@@ -109,8 +109,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/ic_baseline_security"
+        android:background="@drawable/input_bg2"
+        android:drawableLeft="@drawable/ic_baseline_securitydark"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Password"
@@ -120,7 +120,7 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/inputRegisterno"
         app:layout_constraintStart_toStartOf="@+id/inputRegisterno"
         app:layout_constraintTop_toBottomOf="@+id/inputRegisterno" />
