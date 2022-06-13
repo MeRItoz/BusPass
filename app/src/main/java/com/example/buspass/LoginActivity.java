@@ -121,8 +121,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
 
-                    String passwordFromDB=snapshot.child(user_id).child("password").getValue(String.class);
-                    if(passwordFromDB.equals(userEnteredPassword)){
+                    String userFromDB=snapshot.child(user_id).child("email").getValue(String.class);
+                    if(userFromDB.equals(userEnteredUsername)){
                         String departmentFromDB=snapshot.child(user_id).child("department").getValue(String.class);
                         String emailFromDB=snapshot.child(user_id).child("email").getValue(String.class);
                         String nameFromDB=snapshot.child(user_id).child("name").getValue(String.class);
