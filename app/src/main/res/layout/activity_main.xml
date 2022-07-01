@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#fece2f">
+    android:background="#000000"
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/busLogo"
@@ -28,7 +28,7 @@
         android:fontFamily="@font/bangers"
         android:text="Bus Pass"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="#D6C634"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -43,7 +43,7 @@
         android:fontFamily="@font/antic"
         android:text="College of Engineering Thalassery"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="#D6C634"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

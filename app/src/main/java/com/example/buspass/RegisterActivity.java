@@ -36,7 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private final int PICK_IMAGE_REQUEST = 22;
     EditText inputRegisterno, inputPassword;
-    private EditText inputName,inputDepart,inputPhone;
+    private EditText inputName,inputDepart,inputPhone,inputAddress;
     private ImageView choosePic;
     private Uri filePath;
     FirebaseDatabase firebaseDatabase;
@@ -62,6 +62,7 @@ public class RegisterActivity extends AppCompatActivity {
         inputName=findViewById(R.id.inputName);
         inputDepart=findViewById(R.id.inputDepart);
         inputPhone=findViewById(R.id.inputPhone);
+        inputAddress=findViewById(R.id.inputAddress);
         btnRegister=findViewById(R.id.btnRegister);
         choosePic = findViewById(R.id.choosePic);
         progressDialog=new ProgressDialog(this);
@@ -161,6 +162,7 @@ public class RegisterActivity extends AppCompatActivity {
         String name=inputName.getText().toString();
         String depart=inputDepart.getText().toString();
         String phone=inputPhone.getText().toString();
+        String address=inputAddress.getText().toString();
 
         if(!email.matches(emailPattern))
         {
@@ -197,7 +199,8 @@ public class RegisterActivity extends AppCompatActivity {
                         String name=inputName.getText().toString();
                         String depart=inputDepart.getText().toString();
                         String phone=inputPhone.getText().toString();
-                        UserHelperClass helperClass=new UserHelperClass(name,email,depart,phone,password);
+                        String address=inputAddress.getText().toString();
+                        UserHelperClass helperClass=new UserHelperClass(name,email,depart,phone,password,address);
 
                         databaseReference.child(user_id).setValue(helperClass);
 

@@ -130,12 +130,14 @@ public class LoginActivity extends AppCompatActivity {
                         String emailFromDB=snapshot.child(user_id).child("email").getValue(String.class);
                         String nameFromDB=snapshot.child(user_id).child("name").getValue(String.class);
                         String phoneFromDB=snapshot.child(user_id).child("phone").getValue(String.class);
+                        String addressFromDB=snapshot.child(user_id).child("address").getValue(String.class);
 
                         Intent intent=new Intent(getApplicationContext(),HomeActivity.class);
                         intent.putExtra("department",departmentFromDB);
                         intent.putExtra("email",emailFromDB);
                         intent.putExtra("name",nameFromDB);
                         intent.putExtra("phone",phoneFromDB);
+                        intent.putExtra("address",addressFromDB);
 
                         startActivity(intent);
                     }

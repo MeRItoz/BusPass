@@ -29,7 +29,7 @@ import com.google.firebase.storage.StorageReference;
 public class HomeActivity<onSuccessListener> extends AppCompatActivity {
 
 
-    TextView user_email,user_name,user_dep,user_phone;
+    TextView user_email,user_name,user_dep,user_phone,user_address;
     ImageView user_pic;
     Button btnRenew;
 
@@ -43,6 +43,7 @@ public class HomeActivity<onSuccessListener> extends AppCompatActivity {
         user_email=findViewById(R.id.user_email);
         user_dep=findViewById(R.id.user_dep);
         user_phone=findViewById(R.id.user_phone);
+        user_address=findViewById(R.id.user_address);
         btnRenew=findViewById(R.id.btnRenew);
 
         showAllData();
@@ -89,10 +90,12 @@ public class HomeActivity<onSuccessListener> extends AppCompatActivity {
         String user_username=intent.getStringExtra("name");
         String user_userdepartment=intent.getStringExtra("department");
         String user_userphone=intent.getStringExtra("phone");
+        String user_useraddress=intent.getStringExtra("address");
 
         user_email.setText(user_useremail);
         user_phone.setText(user_userphone);
         user_dep.setText(user_userdepartment);
         user_name.setText(user_username);
+        user_address.setText(user_useraddress);
     }
 }

@@ -1,14 +1,15 @@
 package com.example.buspass;
 
 public class UserHelperClass {
-    String name,email,department,phone,password;
+    String name,email,department,phone,password,address;
 
-    public UserHelperClass(String name, String email, String department, String phone, String password) {
+    public UserHelperClass(String name, String email, String department, String phone, String password, String address) {
         this.name = name;
         this.email = email;
         this.department = department;
         this.phone = phone;
         this.password = password;
+        this.address = address;
     }
 
     public UserHelperClass() {}
@@ -51,5 +52,13 @@ public class UserHelperClass {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D6C634"
+    android:background="#000000"
     tools:context=".HomeActivity">
 
     <ImageView
@@ -26,7 +26,7 @@
         android:fontFamily="@font/lato_bold"
         android:hint="Email"
         android:text=""
-        android:textColor="@color/black"
+        android:textColor="#D6C634"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.217"
@@ -43,7 +43,7 @@
         android:fontFamily="@font/lato_bold"
         android:hint="Name"
         android:text=""
-        android:textColor="@color/black"
+        android:textColor="#D6C634"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.005"
@@ -58,7 +58,7 @@
         android:fontFamily="@font/lato_bold"
         android:hint="Department"
         android:text=""
-        android:textColor="@color/black"
+        android:textColor="#D6C634"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -73,12 +73,27 @@
         android:fontFamily="@font/lato_bold"
         android:hint="Phone Number"
         android:text=""
-        android:textColor="@color/black"
+        android:textColor="#D6C634"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/head_phone"
         app:layout_constraintTop_toTopOf="@+id/head_phone" />
+
+    <TextView
+        android:id="@+id/user_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/lato_bold"
+        android:hint="Address"
+        android:text=""
+        android:textColor="#D6C634"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/head_address"
+        app:layout_constraintTop_toTopOf="@+id/head_address" />
 
     <TextView
         android:id="@+id/head_name"
@@ -89,7 +104,7 @@
         android:fontFamily="@font/antic"
         android:text="Name:"
         android:textAllCaps="true"
-        android:textColor="@color/black"
+        android:textColor="#D6C634"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.045"
@@ -104,7 +119,7 @@
         android:fontFamily="@font/antic"
         android:text="Department:"
         android:textAllCaps="true"
-        android:textColor="@color/black"
+        android:textColor="#D6C634"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -119,22 +134,37 @@
         android:fontFamily="@font/antic"
         android:text="Mobile no:"
         android:textAllCaps="true"
-        android:textColor="@color/black"
+        android:textColor="#D6C634"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/head_dep"
         app:layout_constraintTop_toBottomOf="@+id/head_dep" />
 
-    <Button
-        android:id="@+id/btnQR"
+    <TextView
+        android:id="@+id/head_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/antic"
+        android:text="Address:"
+        android:textAllCaps="true"
+        android:textColor="#D6C634"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/head_phone"
+        app:layout_constraintTop_toBottomOf="@+id/head_phone" />
+
+    <Button
+        android:id="@+id/btnQR"
+        android:layout_width="107dp"
+        android:layout_height="45dp"
         android:layout_marginStart="32dp"
         android:layout_marginBottom="84dp"
         android:background="@drawable/btn_bg2"
         android:text="QR code"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -143,12 +173,12 @@
 
     <Button
         android:id="@+id/btnRenew"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="111dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="84dp"
         android:background="@drawable/btn_bg2"
         android:text="renew"
-        android:textColor="@color/white"
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnSchedule"
@@ -157,13 +187,13 @@
 
     <Button
         android:id="@+id/btnSchedule"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="102dp"
+        android:layout_height="50dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="84dp"
         android:background="@drawable/btn_bg2"
         android:text="Schedule"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
