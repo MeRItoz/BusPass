@@ -4,75 +4,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D6C634"
+    android:background="#000000"
     tools:context=".PaymentActivity">
 
-
     <TextView
-        android:id="@+id/textTitle"
+        android:id="@+id/sbiText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="Choose Payment Options"
-        android:textColor="@color/black"
-        android:textSize="28sp"
-        android:textStyle="bold"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="484dp"
+        android:text="SBI Collect Reference Id:"
+        android:textColor="#D6C634"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnGpay"
-        android:layout_width="186dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="120dp"
+    <EditText
+        android:id="@+id/sbiInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/btn_bg2"
+        android:autofillHints=""
+        android:background="@drawable/input_bg2"
+        android:ems="10"
+        android:hint="Reference Id"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:paddingLeft="20dp"
-        android:text="Google Pay"
-        android:textAlignment="viewStart"
-        android:textColor="@color/white"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#D6C634"
+        android:textColorHint="#D6C634"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/sbiText"
+        app:layout_constraintTop_toBottomOf="@+id/sbiText" />
+
+    <Button
+        android:id="@+id/btnFinish"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_bg2"
+        android:text="Finish"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/sbiInput"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/sbiInput"
+        app:layout_constraintTop_toBottomOf="@+id/sbiInput" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="24dp"
+        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+        app:layout_constraintLeft_toLeftOf="@id/locText"
+        app:layout_constraintRight_toRightOf="@id/locText"
+        app:layout_constraintTop_toTopOf="@id/locText">
+
+        <AutoCompleteTextView
+            android:id="@+id/dropMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:height="48dp"
+            android:background="@drawable/input_bg2"
+            android:clickable="false"
+            android:editable="false"
+            android:inputType="none"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:text=""
+            android:textColor="#B6C634"
+            android:textColorHint="#B6C634" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/locText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:text="Select Starting Location:"
+        android:textAlignment="viewStart"
+        android:textColor="#D6C634"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTitle" />
-
-    <Button
-        android:id="@+id/btnPaytm"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/btn_bg2"
-        android:text="Paytm"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/btnGpay"
-        app:layout_constraintStart_toStartOf="@+id/btnGpay"
-        app:layout_constraintTop_toBottomOf="@+id/btnGpay" />
-
-    <Button
-        android:id="@+id/btnDebitcard"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/btn_bg2"
-        android:text="Debit card"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/btnPaytm"
-        app:layout_constraintStart_toStartOf="@+id/btnPaytm"
-        app:layout_constraintTop_toBottomOf="@+id/btnPaytm" />
-
-    <Button
-        android:id="@+id/btnCreditcard"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/btn_bg2"
-        android:text="Credit card"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/btnDebitcard"
-        app:layout_constraintStart_toStartOf="@+id/btnDebitcard"
-        app:layout_constraintTop_toBottomOf="@+id/btnDebitcard" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
