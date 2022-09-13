@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -33,6 +34,10 @@ public class HomeActivity<onSuccessListener> extends AppCompatActivity {
     ImageView user_pic;
     Button btnRenew;
 
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +51,29 @@ public class HomeActivity<onSuccessListener> extends AppCompatActivity {
         user_address=findViewById(R.id.user_address);
         btnRenew=findViewById(R.id.btnRenew);
 
+        firebaseDatabase=FirebaseDatabase.getInstance();
+        databaseReference=firebaseDatabase.getReference("Admin msg");
+
+
+
+
+
+        Button btnSchedule=findViewById(R.id.btnSchedule);
+        btnSchedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, ScheduleActivity.class));
+            }
+        });
+
+        Button btnNoti=findViewById(R.id.btnnotification);
+        btnNoti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, NotificationActivity.class));
+            }
+        });
+
         showAllData();
         GetImage();
 
@@ -57,6 +85,8 @@ public class HomeActivity<onSuccessListener> extends AppCompatActivity {
         });
 
     }
+
+
 
     private void GetImage() {
         user_pic=findViewById(R.id.user_pic);

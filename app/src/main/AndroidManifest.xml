@@ -17,6 +17,21 @@
         android:theme="@style/Theme.BusPass"
         tools:targetApi="31">
         <activity
+            android:name=".ScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminscheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminnotifiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminhomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".NewPasswordActivity"
             android:exported="false" />
         <activity

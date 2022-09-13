@@ -31,17 +31,23 @@
         <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/drawable/ic_contact_phoneylw.xml" value="0.197" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/drawable/ic_launcher_background.xml" value="0.197" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/drawable/input_bg2.xml" value="0.197" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/layout/activity_adminhome.xml" value="0.22" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/layout/activity_adminlogin.xml" value="0.25" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/layout/activity_adminnotifi.xml" value="0.25" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/layout/activity_adminschedule.xml" value="0.22" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/layout/activity_forgotpassword.xml" value="0.21" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/layout/activity_home.xml" value="0.33" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/layout/activity_main.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/layout/activity_new_password.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/layout/activity_notification.xml" value="0.19655797101449277" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/layout/activity_password_updated.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/layout/activity_payment.xml" value="0.25" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/layout/activity_schedule.xml" value="0.19655797101449277" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/layout/activity_userselect.xml" value="0.21" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/layout/dropdown_item.xml" value="0.1947463768115942" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/BusPass/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>
   </component>
